@@ -66,12 +66,22 @@ Apa nama object yang dihasilkan?
 
 ## 2.3.3 Pertanyaan
 1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk
-mendeklarasikan konstruktor berparameter!
-2. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut?
+mendeklarasikan konstruktor berparameter!<br>
+      ada 5 konstruktor berparameter, judul, pengarang, halaman, stok, harga
+
+2. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut?<br>
+      objek bk2 dari class Buku10 dengan menggunakan konstruktor berparameter untuk menginisialisasi nilai atribut-atribut objek tersebut
+
 3. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana
-hasilnya? Jelaskan mengapa hasilnya demikian!
+hasilnya? Jelaskan mengapa hasilnya demikian!<br>
+      maka akan terjadi kesalahan kompilasi. Hal ini karena dalam program tersebut, ketika objek dibuat tanpa menggunakan konstruktor default, konstruktor default tersebut secara implisit dipanggil saat pembuatan objek baru jika tidak ada konstruktor lain yang ditentukan dalam class
+
 4. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses
-secara berurutan? Jelaskan alasannya!
+secara berurutan? Jelaskan alasannya!<br>
+      Tidak, method di dalam class Buku10 tidak harus diakses secara berurutan setelah melakukan instansiasi objek
+
 5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor
-berparameter dari class Buku!
-6. Commit dan push kode program ke Github
+berparameter dari class Buku!<br>
+      ![alt text](image-3.png)
+
+6. Commit dan push kode program ke Github<br>
