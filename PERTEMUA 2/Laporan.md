@@ -83,5 +83,3 @@ secara berurutan? Jelaskan alasannya!<br>
 5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor
 berparameter dari class Buku!<br>
       ![alt text](image-3.png)
-
-6. Commit dan push kode program ke Github<br>
