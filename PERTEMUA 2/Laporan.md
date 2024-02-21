@@ -32,9 +32,14 @@ Buku? Sebutkan apa saja atributnya!<br>
       - method ganti harga
 
 4. Perhatikan method terjual() yang terdapat di dalam class Buku. Modifikasi isi method tersebut
-sehingga proses pengurangan hanya dapat dilakukan jika stok masih ada (lebih besar dari 0)!
+sehingga proses pengurangan hanya dapat dilakukan jika stok masih ada (lebih besar dari 0)!<br>
+      void terjual(int jml) {
+        if (stok > 0 && jml <= stok)
+            stok -= jml;
+    }
 
-5. Menurut Anda, mengapa method restock() mempunyai satu parameter berupa bilangan int?
+5. Menurut Anda, mengapa method restock() mempunyai satu parameter berupa bilangan int?<br>
+   pemilihan parameter bilangan bulat untuk method restock() dapat memberikan kemudahan penggunaan, validasi input
 
 6. Commit dan push kode program ke Github
 ![alt text](image.png)
@@ -47,6 +52,26 @@ sehingga proses pengurangan hanya dapat dilakukan jika stok masih ada (lebih bes
 Apa nama object yang dihasilkan?
       Buku10 bk1 = new Buku10();
 
-2. Bagaimana cara mengakses atribut dan method dari suatu objek?
+2. Bagaimana cara mengakses atribut dan method dari suatu objek?<br>
+      this.nim = nim;
 
-3. Mengapa hasil output pemanggilan method tampilInformasi() pertama dan kedua berbeda?
+3. Mengapa hasil output pemanggilan method tampilInformasi() pertama dan kedua berbeda?<br>
+      tergantung pada implementasi method tersebut dan juga keadaan objek pada saat pemanggilan
+
+## 2.3 Percobaan 3: Membuat Konstruktor
+1. class Buku <br>
+![alt text](<img/WhatsApp Image 2024-02-21 at 14.53.27_26c96956.jpg>)
+2. class BukuMain <br>
+![alt text](image-2.png)
+
+## 2.3.3 Pertanyaan
+1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk
+mendeklarasikan konstruktor berparameter!
+2. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut?
+3. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana
+hasilnya? Jelaskan mengapa hasilnya demikian!
+4. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses
+secara berurutan? Jelaskan alasannya!
+5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor
+berparameter dari class Buku!
+6. Commit dan push kode program ke Github
