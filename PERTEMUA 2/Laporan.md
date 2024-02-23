@@ -42,10 +42,10 @@ sehingga proses pengurangan hanya dapat dilakukan jika stok masih ada (lebih bes
    pemilihan parameter bilangan bulat untuk method restock() dapat memberikan kemudahan penggunaan, validasi input
 
 6. Commit dan push kode program ke Github
-![alt text](image.png)
+![alt text](img/image.png)
 
 ## 2.2 Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
 ## 2.2.3 PERTANYAAN
 1. Pada class BukuMain, tunjukkan baris kode program yang digunakan untuk proses instansiasi!<br>
@@ -62,7 +62,7 @@ Apa nama object yang dihasilkan?
 1. class Buku <br>
 ![alt text](<img/WhatsApp Image 2024-02-21 at 14.53.27_26c96956.jpg>)
 2. class BukuMain <br>
-![alt text](image-2.png)
+![alt text](img/image-2.png)
 
 ## 2.3.3 Pertanyaan
 1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk
@@ -82,10 +82,15 @@ secara berurutan? Jelaskan alasannya!<br>
 
 5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor
 berparameter dari class Buku!<br>
-      ![alt text](image-3.png)
+      ![alt text](img/image-3.png)
 
 ## 2.4 LATIHAN PRAKTIKUM
 1. <br>
 ![alt text](<img/WhatsApp Image 2024-02-23 at 11.00.31_64203669.jpg>)
-2. <br>
+<br>
 ![alt text](<img/WhatsApp Image 2024-02-23 at 11.16.52_87e8c3a7.jpg>)
+
+2. <br>
+![alt text](<img/WhatsApp Image 2024-02-23 at 20.01.02_3ce1e902.jpg>)
+<br>
+![alt text](<img/code 1.png>)
