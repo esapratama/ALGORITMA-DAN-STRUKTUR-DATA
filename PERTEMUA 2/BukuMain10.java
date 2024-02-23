@@ -2,23 +2,24 @@ public class BukuMain10 {
 
     public static void main(String[] args) {
         Buku10 bk1 = new Buku10();
-        bk1.judul = "Today Ends Tomorrow Comes";
-        bk1.pengarang = "Denanda Pratiwi";
-        bk1.halaman = 198;
-        bk1.stok = 13;
-        bk1.harga = 71000;
 
-        bk1.tampilInformasi();
-        bk1.terjual(5);
-        bk1.gantiHarga(60000);
-        bk1.tampilInformasi();
+        bk1.nama = "Malioboro at midnight";
+        bk1.pengarang = "Skysphire";
+        bk1.penerbit = "Bukune";
+        bk1.hargaSatuan = 99000;
+        bk1.jumlah = 50;
 
-        Buku10 bk2 = new Buku10("Self Reward", "Maheera Ayesha", 160, 29, 59000);
-        bk2.terjual(11);
-        bk2.tampilInformasi();
+        int hargaTotal = bk1.hitungHargaTotal();
+        int diskon = bk1.hitungDiskon();
+        int hargaBayar = bk1.hitungHargaBayar();
 
-        Buku10 bkEsa = new Buku10("Malioboro at midnight", "Skysphire", 436, 50, 99000);
-        bk2.terjual(14);
-        bk2.tampilInformasi();
+        System.out.println("Nama Buku : " + bk1.nama);
+        System.out.println("Pengarang : " + bk1.pengarang);
+        System.out.println("Pernebit : " + bk1.penerbit);
+        System.out.println("Harga Satuan : " + bk1.hargaSatuan);
+        System.out.println("Jumlah : " + bk1.jumlah);
+        System.out.println("Harga Total : " + hargaTotal);
+        System.out.println("Diskon : " + diskon);
+        System.out.println("Harga Bayar : " + hargaBayar);
     }
 }

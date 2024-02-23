@@ -1,39 +1,28 @@
 public class Buku10 {
 
-    String judul, pengarang;
-    int halaman, stok, harga;
+    String nama, pengarang, penerbit;
+    int hargaSatuan, jumlah, diskon;
 
-    public Buku10() {
-
+    int hitungHargaTotal() {
+        return hargaSatuan * jumlah;
     }
 
-    public Buku10(String jud, String pg, int hal, int stok, int har) {
-        judul = jud;
-        pengarang = pg;
-        halaman = hal;
-        this.stok = stok;
-        harga = har;
+    int hitungDiskon() {
+        int hargaTotal = hitungHargaTotal();
+        if (hargaTotal > 100000) {
+            diskon = (int) (hargaTotal * 0.1);
+        } else if (hargaTotal >= 50000) {
+            diskon = (int) (hargaTotal * 0.05);
+        } else {
+            diskon = 0;
+        }
+        return diskon;
     }
 
-    void tampilInformasi() {
-        System.out.println("Judul: " + judul);
-        System.out.println("pengarang: " + pengarang);
-        System.out.println("Jumlah halaman: " + halaman);
-        System.out.println("Sisa stok: " + stok);
-        System.out.println("Harga: Rp " + harga);
-    }
-
-    void terjual(int jml) {
-        if (stok > 0 && jml <= stok)
-            stok -= jml;
-    }
-
-    void restock(int jml) {
-        stok += jml;
-    }
-
-    void gantiHarga(int hrg) {
-        harga = hrg;
+    int hitungHargaBayar() {
+        int hargaTotal = hitungHargaTotal();
+        int totalDiskon = hitungDiskon();
+        return hargaTotal - totalDiskon;
     }
 
 }
