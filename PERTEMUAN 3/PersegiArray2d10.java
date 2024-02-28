@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Array2d10 {
+public class PersegiArray2d10 {
 
     public int panjang;
     public int lebar;

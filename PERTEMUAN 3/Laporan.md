@@ -69,8 +69,7 @@ tidak, akan menghasilkan kesalahan kompilasi <br>
 
 ## 3.4.3 Pertanyaan
 1. Dapatkah konstruktor berjumlah lebih dalam satu kelas? Jelaskan dengan contoh! <br>
-iya, dalam Java, sebuah kelas dapat memiliki lebih dari satu konstruktor. <br>
-- contoh <br>
+konstruktor sendiri bisa lebih dari dua, karena konstruktor sendiri merupakan nama yang sama dengan nama kelas, konstruktor pertama merupakan konstruktor default dengan tidak ada parameter, lalu konstruktor kedua ada parameter <br>
 2. Jika diketahui terdapat class Segitiga seperti berikut ini: <br>
 public class Segitiga10 { <br>
         public int alas; <br>

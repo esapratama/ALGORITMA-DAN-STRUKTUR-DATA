@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ArrayObject10 {
+public class PersegiObjets10 {
 
     public int panjang;
     public int lebar;

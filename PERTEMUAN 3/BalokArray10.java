@@ -1,4 +1,4 @@
-public class ArrayBalok10 {
+public class BalokArray10 {
     public static void main(String[] args) {
         Balok10[] b1Array = new Balok10[3];
 
