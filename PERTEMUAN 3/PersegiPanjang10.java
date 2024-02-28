@@ -1,36 +1,25 @@
-import java.util.Scanner;
-
 public class PersegiPanjang10 {
 
     public int panjang;
     public int lebar;
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        PersegiPanjang10[] ppArray = new PersegiPanjang10[3];
 
-        System.out.print("Masukkan panjang array: ");
-        int panjangArray = sc.nextInt();
-        System.out.print("Masukkan lebar array: ");
-        int lebarArray = sc.nextInt();
+        ppArray[0] = new PersegiPanjang10();
+        ppArray[0].panjang = 110;
+        ppArray[0].lebar = 30;
 
-        PersegiPanjang10[][] ppArray = new PersegiPanjang10[panjangArray][lebarArray];
+        ppArray[1] = new PersegiPanjang10();
+        ppArray[1].panjang = 80;
+        ppArray[1].lebar = 40;
 
-        for (int i = 0; i < panjangArray; i++) {
-            for (int j = 0; j < lebarArray; j++) {
-                ppArray[i][j] = new PersegiPanjang10();
-                System.out.println("Persegi panjang ke-" + i + ", " + j);
-                System.out.print("Masukkan panjang: ");
-                ppArray[i][j].panjang = sc.nextInt();
-                System.out.print("Masukkan lebar: ");
-                ppArray[i][j].lebar = sc.nextInt();
-            }
-        }
+        ppArray[2] = new PersegiPanjang10();
+        ppArray[2].panjang = 100;
+        ppArray[2].lebar = 20;
 
-        for (int i = 0; i < panjangArray; i++) {
-            for (int j = 0; j < lebarArray; j++) {
-                System.out.println("Persegi Panjang ke-" + i + ", " + j);
-                System.out.println("Panjang: " + ppArray[i][j].panjang + ", lebar: " + ppArray[i][j].lebar);
-            }
-        }
+        System.out.println("Persegi Panjang ke-0, panjang : " + ppArray[0].panjang + ", lebar: " + ppArray[0].lebar);
+        System.out.println("Persegi Panjang ke-1, panjang : " + ppArray[1].panjang + ", lebar: " + ppArray[1].lebar);
+        System.out.println("Persegi Panjang ke-2, panjang : " + ppArray[2].panjang + ", lebar: " + ppArray[2].lebar);
     }
 }

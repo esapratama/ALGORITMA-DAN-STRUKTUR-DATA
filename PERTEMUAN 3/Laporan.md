@@ -1,5 +1,5 @@
 # <p align ="center">  LAPORAN PRAKTIKUM ALGORITMA DAN STRUKTUR DATA </p>
-# <p align ="center"> JOBSHEET 1 KONSEP DASAR PEMROGRAMAN </p>
+# <p align ="center"> JOBSHEET 3 ARRAY OF OBJEK </p>
 <br><br><br><br>
 
 <p align="center">
@@ -70,6 +70,7 @@ tidak, akan menghasilkan kesalahan kompilasi <br>
 ## 3.4.3 Pertanyaan
 1. Dapatkah konstruktor berjumlah lebih dalam satu kelas? Jelaskan dengan contoh! <br>
 iya, dalam Java, sebuah kelas dapat memiliki lebih dari satu konstruktor. <br>
+- contoh <br>
 2. Jika diketahui terdapat class Segitiga seperti berikut ini: <br>
 public class Segitiga10 { <br>
         public int alas; <br>
@@ -84,11 +85,23 @@ yang masing-masing digunakan untuk mengisikan atribut alas dan tinggi. <br>
 3. Tambahkan method hitungLuas() dan hitungKeliling() pada class Segitiga
 tersebut. Asumsi segitiga adalah segitiga siku-siku. (Hint: Anda dapat menggunakan bantuan 
 library Math pada Java untuk mengkalkulasi sisi miring) <br>
+- INPUT <br>
+![alt text](<img/SG INPUT.png>) <br>
+- OUTPUT <br>
+![alt text](<img/SG OUTPUT.jpg>) <br>
 4. Pada fungsi main, buat array Segitiga sgArray yang berisi 4 elemen, isikan masing-masing atributnya sebagai berikut: <br>
 sgArray ke-0 alas: 10, tinggi: 4 <br>
 sgArray ke-1 alas: 20, tinggi: 10 <br>
 sgArray ke-2 alas: 15, tinggi: 6 <br>
 sgArray ke-3 alas: 25, tinggi: 10 <br>
+- INPUT <br>
+![alt text](<img/SGT INPUT.jpg>) <br>
+- OUPUT <br>
+![alt text](<img/SGT OUTPUT.png>) <br>
 5. Kemudian menggunakan looping, cetak luas dan keliling dengan cara memanggil method hitungLuas() dan hitungKelilin() <br>
+- INPUT <br>
+![alt text](<img/ST INPUT.png>) <br>
+- OUTPUT <br>
+![alt text](<img/ST OUTPUT.jpg>) <br>
 
 ## 3.5 Latihan Praktikum
