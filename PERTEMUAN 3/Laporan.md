@@ -71,9 +71,16 @@ tidak, akan menghasilkan kesalahan kompilasi <br>
 1. Dapatkah konstruktor berjumlah lebih dalam satu kelas? Jelaskan dengan contoh! <br>
 iya, dalam Java, sebuah kelas dapat memiliki lebih dari satu konstruktor. <br>
 2. Jika diketahui terdapat class Segitiga seperti berikut ini: <br>
-
+public class Segitiga10 { <br>
+        public int alas; <br>
+        public int tinggi; <br>
+} <br>
 Tambahkan konstruktor pada class Segitiga tersebut yang berisi parameter int a, int t
 yang masing-masing digunakan untuk mengisikan atribut alas dan tinggi. <br>
+- INPUT <br>
+![alt text](<img/P3 2.png>) <br>
+- OUTPUT <br>
+![alt text](<img/P3 2 OUTPUT.jpg>) <br>
 3. Tambahkan method hitungLuas() dan hitungKeliling() pada class Segitiga
 tersebut. Asumsi segitiga adalah segitiga siku-siku. (Hint: Anda dapat menggunakan bantuan 
 library Math pada Java untuk mengkalkulasi sisi miring) <br>
