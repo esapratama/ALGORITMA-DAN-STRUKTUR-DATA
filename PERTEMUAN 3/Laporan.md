@@ -13,10 +13,7 @@
 <p align = "center"> Jurusan    : TEKNOLOGI INFORMASI </p>
 
 ## 3.2 Percobaan 1: Membuat Array dari Object, Mengisi dan Menampilkan
-- INPUT <br>
 ![alt text](<img/3. PB 1.png>) <br>
-- OUTPUT <br>
-
 
 ## 3.2.3 Pertanyaan
 1. Berdasarkan uji coba 3.2, apakah class yang akan dibuat array of object harus selalu memiliki 
@@ -40,9 +37,7 @@ konstruktur pada baris program berikut : ppArray[1] = new PersegiPanjang10(); <b
 - Pemisahan class main dan class PersegiPanjang10 adalah bagian dari praktik yang disebut pemisahan kelas <br>
 
 ## 3.3 Percobaan 2: Menerima Input Isian Array Menggunakan Looping
-- INPUT <br>
 ![alt text](<img/3. PB 2.png>) <br>
-- OUTPUT <br>
 
 
 ## 3.3.3 Pertanyaan
@@ -62,11 +57,8 @@ pada ppArray[i] sekaligus ppArray[0]?Jelaskan ! <br>
 tidak, akan menghasilkan kesalahan kompilasi <br>
 
 ## 3.4 Percobaan 3: Penambahan Operasi Matematika di Dalam Method
-- INPUT <br>
 ![alt text](<img/3. PB 3.png>) <br>
 ![alt text](<img/3. PB 3.0.png>) <br>
-- OUTPUT <br>
-![alt text](<img/P3 OUTPUT.jpg>)
 
 ## 3.4.3 Pertanyaan
 1. Dapatkah konstruktor berjumlah lebih dalam satu kelas? Jelaskan dengan contoh! <br>
@@ -78,31 +70,22 @@ public class Segitiga10 { <br>
 } <br>
 Tambahkan konstruktor pada class Segitiga tersebut yang berisi parameter int a, int t
 yang masing-masing digunakan untuk mengisikan atribut alas dan tinggi. <br>
-- INPUT <br>
 ![alt text](<img/3. PT 2.png>) <br>
-- OUTPUT <br>
- <br>
+
 3. Tambahkan method hitungLuas() dan hitungKeliling() pada class Segitiga
 tersebut. Asumsi segitiga adalah segitiga siku-siku. (Hint: Anda dapat menggunakan bantuan 
 library Math pada Java untuk mengkalkulasi sisi miring) <br>
-- INPUT <br>
 ![alt text](<img/3. PT 3.png>) <br>
-- OUTPUT <br>
- <br>
+
 4. Pada fungsi main, buat array Segitiga sgArray yang berisi 4 elemen, isikan masing-masing atributnya sebagai berikut: <br>
 sgArray ke-0 alas: 10, tinggi: 4 <br>
 sgArray ke-1 alas: 20, tinggi: 10 <br>
 sgArray ke-2 alas: 15, tinggi: 6 <br>
 sgArray ke-3 alas: 25, tinggi: 10 <br>
-- INPUT <br>
 ![alt text](<img/3. PT 4.png>) <br>
-- OUPUT <br>
- <br>
+
 5. Kemudian menggunakan looping, cetak luas dan keliling dengan cara memanggil method hitungLuas() dan hitungKelilin() <br>
-- INPUT <br>
 ![alt text](<img/3. PT 5.png>) <br>
-- OUTPUT <br>
- <br>
 
 ## 3.5 Latihan Praktikum
 1. Buatlah program yang dapat menghitung luas permukaan dan volume bangun ruang kerucut, 
@@ -110,10 +93,14 @@ limas segi empat sama sisi, dan bola. Buatlah 3 (tiga) class sesuai dengan jumla
 ruang. Buatlah satu main class untuk membuat array of objects yang menginputkan atribut, atribut yang ada menggunakan konstruktor semua bangun ruang tersebut. Dengan ketentuan, <br>
 a. Buat looping untuk menginputkan masing-masing atributnya, kemudian tampilkan 
 luas permukaan dan volume dari tiap jenis bangun ruang tersebut. <br>
+![alt text](<img/3. LP 1 MAIN.png>) <br>
 b. Pada kerucut, inputan untuk atribut hanya jari-jari dan sisi miring <br>
+![alt text](<img/3. LP 1 KERUCUT.png>) <br>
 c. Pada limas segi empat sama sisi, inputan untuk atribut hanya panjang sisi alas dan 
 tinggi limas <br>
+![alt text](<img/3. LP 1 LIMAS.png>) <br>
 d. Pada bola, inpuntan untuk atribut hanya jari-jari <br>
+![alt text](<img/3. LP 1 BOLA.png>) <br>
 
 2. Sebuah kampus membutuhkan program untuk menampilkan informasi mahasiswa berupa nama, 
 nim, jenis kelamin dan juga IPK mahasiswa. Program dapat menerima input semua informasi 
