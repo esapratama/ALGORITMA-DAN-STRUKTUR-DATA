@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class MahasiswaMain10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Mahasiswa10 arrayMahasiswa[] = new Mahasiswa10[3];
+        Mahasiswa10 arrayMahasiswa[] = new Mahasiswa10[3]; // instance of object
         for (int i = 0; i < 3; i++) {
             arrayMahasiswa[i] = new Mahasiswa10();
             System.out.println("Masukkan data mahasiswa ke-" + (i + 1));

@@ -7,7 +7,7 @@ public class PersegiLenght10 {
 
     public PersegiLenght10(int p, int l) {
         panjang = p;
-        lebar = l;
+        lebar = l; // parameter
     }
 
     public static void main(String[] args) {
