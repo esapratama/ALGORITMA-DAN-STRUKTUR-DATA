@@ -1,8 +1,8 @@
 package SUM;
 
 public class Sum10 {
-    int elemen;
-    double keuntungan[], total;
+    public int elemen;
+    public double keuntungan[], total;
 
     Sum10(int elemen) {
         this.elemen = elemen;

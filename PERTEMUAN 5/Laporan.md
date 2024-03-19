@@ -22,7 +22,7 @@ perbedaan bagian kode pada penggunaan if dan else! <br>
 - Penggunaan if dengan else: Melakukan sesuatu jika kondisi terpenuhi, dan melakukan sesuatu yang berbeda jika tidak terpenuhi. <br>
 2. Apakah memungkinkan perulangan pada method faktorialBF() dirubah selain menggunakan 
 for?Buktikan! <br>
-
+![alt text](<img/PC 5 12.jpg>) <br>
 3. Jelaskan perbedaan antara fakto *= i; dan int fakto = n * faktorialDC(n-1); ! <br>
 - fakto *= i;: untuk menghitung faktorial dengan cara mengalikan semua angka dari 1 hingga n secara berturut-turut. <br>
 - int fakto = n * faktorialDC(n-1);: untuk menghitung faktorial dengan cara berulang menggunakan pemecahan masalah menjadi bagian-bagian kecil. Dan Kemudian hasilnya digabungkan untuk mendapatkan faktorial dari n. <br>
@@ -39,12 +39,14 @@ for?Buktikan! <br>
    A. menggunakan pendekatan rekursif dengan membagi permasalahan menjadi submasalah yang lebih kecil <br>
    B. setiap langkah rekursif, pangkat dari setengah eksponen dihitung dan hasilnya dikuadratkan <br>
 2. Apakah tahap combine sudah termasuk dalam kode tersebut?Tunjukkan! <br>
-
+![alt text](<img/PC 5 22.jpg>) <br>
 3. Modifikasi kode program tersebut, anggap proses pengisian atribut dilakukan dengan 
 konstruktor. <br>
-
+![alt text](<img/PC 23A.jpg>) <br>
+![alt text](<img/PC 23B.jpg>) <br>
 4. Tambahkan menu agar salah satu method yang terpilih saja yang akan dijalankan menggunakan 
 switch-case! <br>
+![alt text](<img/PC 24.png>) <br>
 
 ## Menghitung Sum Array dengan Algoritma Brute Force dan Divide and Conquer
 ![alt text](<img/5. P SUM.png>) <br>
@@ -59,6 +61,7 @@ return lsum+rsum+arr[mid]; <br>
 Bagaimana cara menghitung sekaligus keuntungan beberapa bulan untuk beberapa
 perusahaan.(Setiap perusahaan bisa saja memiliki jumlah bulan berbeda-beda)? Buktikan 
 dengan program! <br>
+![alt text](<img/PC 5 33.png>) <br>
 
 ## 4.5 Latihan Praktikum
 Tentukan:
