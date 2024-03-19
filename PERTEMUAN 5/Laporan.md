@@ -32,9 +32,17 @@ for?Buktikan! <br>
 ![alt text](<img/5. MAIN PANGKAT.png>)
 ## 4.3.3 Pertanyaan
 1. Jelaskan mengenai perbedaan 2 method yang dibuat yaitu PangkatBF() dan PangkatDC()! <br>
+- PangkatBF() : <br>
+   A. menggunakan pendekatan langsung dengan melakukan iterasi sebanyak n kali, di mana n merupakan eksponen pangkat <br>
+   B. Pada setiap iterasi, hasil pangkat dihitung dengan mengalikan bilangan asli dengan dirinya sendiri sebanyak kali sesuai dengan eksponen <br>
+- PangkatDc() : <br>
+   A. menggunakan pendekatan rekursif dengan membagi permasalahan menjadi submasalah yang lebih kecil <br>
+   B. setiap langkah rekursif, pangkat dari setengah eksponen dihitung dan hasilnya dikuadratkan <br>
 2. Apakah tahap combine sudah termasuk dalam kode tersebut?Tunjukkan! <br>
+
 3. Modifikasi kode program tersebut, anggap proses pengisian atribut dilakukan dengan 
 konstruktor. <br>
+
 4. Tambahkan menu agar salah satu method yang terpilih saja yang akan dijalankan menggunakan 
 switch-case! <br>
 
@@ -44,10 +52,19 @@ switch-case! <br>
 ## 4.4.3 Pertanyaan
 1. Mengapa terdapat formulasi return value berikut?Jelaskan! <br>
 return lsum+rsum+arr[mid]; <br>
+- digunakan dalam metode Divide and Conquer untuk menghitung hasil pangkat dari setiap submasalah. Memungkinkan untuk menggabungkan hasil dari kedua submasalah dan menghitung hasil pangkat secara rekursif. Hasil pangkat dari kedua submasalah termasuk dalam perhitungan akhir, memastikan bahwa hasil pangkat akhir yang benar diperoleh. <br>
 2. Kenapa dibutuhkan variable mid pada method TotalDC()? <br>
+- untuk menentukan elemen tengah dari array saat membagi masalah menjadi submasalah yang lebih kecil <br>
 3. Program perhitungan keuntungan suatu perusahaan ini hanya untuk satu perusahaan saja.
 Bagaimana cara menghitung sekaligus keuntungan beberapa bulan untuk beberapa
 perusahaan.(Setiap perusahaan bisa saja memiliki jumlah bulan berbeda-beda)? Buktikan 
 dengan program! <br>
 
 ## 4.5 Latihan Praktikum
+Tentukan:
+a. top_acceleration tertinggi menggunakan Divide and Conquer! <br>
+b. top_acceleration terendah menggunakan Divide and Conquer! <br>
+c. Rata-rata top_power dari seluruh mobil menggunakan Brute Force! <br>
+
+![alt text](<img/LT 5.png>) <br>
+![alt text](<img/LT 5 MAIN.png>)
