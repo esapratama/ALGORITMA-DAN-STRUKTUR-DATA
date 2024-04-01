@@ -40,9 +40,12 @@ dataBuku.tampilDataBuku(); <br>
 3. Jika data Kode Buku yang dimasukkan tidak urut. Apakah program masih dapat berjalan? Mengapa
 demikian! Tunjukkan hasil screenshoot untuk bukti dengan kode Buku yang acak. Jelaskan Mengapa hal tersebut bisa terjadi? <br>
 - Program masih akan berjalan meskipun data Kode Buku yang dimasukkan tidak urut. karena pencarian dilakukan baik dengan pencarian berurutan (sequential search) maupun pencarian biner (binary search) <br>
-
+![alt text](img/OP1.1A.jpg) <br>
+![alt text](img/OP1.1B.jpg) <br>
+![alt text](img/OP1.1C.jpg) <br>
 4. Jika Kode Buku yang dimasukkan dari Kode Buku terbesar ke terkecil (missal : 20215, 20214, 20212, 20211, 20210) dan elemen yang dicari adalah 20210. Bagaimana hasil dari binary search? Apakah sesuai? Jika tidak sesuai maka ubahlah kode program binary seach agar hasilnya sesuai! <br>
-![alt text](<img/NO4.2 P7.png>) <br>
+![alt text](<img/UP4 .3A P7.jpg>) <br>
+![alt text](<img/UP4 .3 P7.jpg>) <br>
 
 ## 6.4 Percobaan Pengayaan Divide and Conquer
 ![alt text](<img/7 MS.png>) <br>
@@ -53,7 +56,7 @@ demikian! Tunjukkan hasil screenshoot untuk bukti dengan kode Buku yang acak. Je
 - Ubah tipe data dari kode Buku yang awalnya int menjadi String <br>
 - Tambahkan method untuk pencarian kode Buku (bertipe data String) dengan menggunakan sequential search dan binary search. <br>
 ![alt text](img/LP7.1A.png) <br>
-![alt text](img/LP7.1B.png) <br>
+![alt text](<img/UP LP.1B P7.png>) <br>
 ![alt text](img/LP7.1C.png) <br>
 
 2. Modifikasi percobaan searching diatas dengan ketentuan berikut ini <br>

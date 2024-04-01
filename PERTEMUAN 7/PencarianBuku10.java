@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class PencarianBuku10 {
 
     // public Buku10 FindBuku(int cari) {
@@ -70,10 +68,10 @@ public class PencarianBuku10 {
             mid = left + (right - left) / 2; // proses devide
             if (cari == listBk[mid].kodeBuku) {
                 return (mid);
-            } else if (listBk[mid].kodeBuku > cari) {
-                return FindSeqSearch(cari, left, mid);
+            } else if (listBk[mid].kodeBuku < cari) {
+                return FindSeqSearch(cari, left, mid - 1); // Modifikasi di sini
             } else {
-                return FindSeqSearch(cari, mid, right);
+                return FindSeqSearch(cari, mid + 1, right); // Modifikasi di sini
             }
         }
         return -1;
