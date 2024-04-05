@@ -49,7 +49,27 @@ mengonversi bilangan desimal menjadi biner menggunakan stack. Dilakukan dengan m
 
 ## 2.3 Percobaan 3: Konversi Notasi Infix ke Postfix
 - INPUT <br>
+![alt text](img/PO1.png) <br>
+![alt text](<img/PO1 MAIN.png>) <br>
 - OUTPUT <br>
+![alt text](<img/PO OU.jpg>) <br>
 ## 2.3.3 Pertanyaan
+1. Pada method derajat, mengapa return value beberapa case bernilai sama? Apabila return value diubah dengan nilai berbeda-beda setiap case-nya, apa yang terjadi? <br>
+Maka urutan operator yang dihasilkan dalam ekspresi postfix dapat berubah sesuai dengan prioritas yang ditentukan dalam method derajat. <br>
+2. Jelaskan alur kerja method konversi! <br>
+Untuk mengonversi ekspresi matematika dalam bentuk infix menjadi ekspresi postfix. <br>
+3. Pada method konversi, apa fungsi dari potongan kode berikut? <br>
+c = Q.chartat(i);
+langkah untuk mengambil karakter berdasarkan indeks dalam string Q pada setiap iterasi loop. <br>
 
 ## 2.4 Latihan Praktikum
+Perhatikan dan gunakan kembali kode program pada Percobaan 1. Tambahkan dua method berikut pada class Gudang: <br>
+• Method lihatBarangTerbawah digunakan untuk mengecek barang pada tumpukan terbawah <br>
+• Method cariBarang digunakan untuk mencari ada atau tidaknya barang berdasarkan kode barangnya atau nama barangnya <br>
+- INPUT <br>
+![alt text](img/GD1.png) <br>
+![alt text](<img/GD1 MAIN.png>) <br>
+- OUTPUT <br>
+![alt text](<img/GD OU1.jpg>) <br>
+![alt text](<img/GD OU2.jpg>) <br>
+![alt text](<img/GD OU3.jpg>) <br>

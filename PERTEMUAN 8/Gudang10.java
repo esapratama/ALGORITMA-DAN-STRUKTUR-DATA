@@ -1,8 +1,7 @@
 public class Gudang10 {
 
     Barang10[] tumpukan;
-    int size;
-    int top;
+    int size, top;
 
     public Gudang10(int kapasitas) {
         size = kapasitas;
@@ -25,6 +24,10 @@ public class Gudang10 {
             return false;
         }
     }
+
+    public boolean isEmpty() {
+        return top == -1;
+    } //
 
     public void tambahBarang(Barang10 brg) {
         if (!cekPenuh()) {
@@ -59,6 +62,38 @@ public class Gudang10 {
             System.out.println("Tumpukan barang kosong.");
             return null;
         }
+    }
+
+    // Menambahkan method lihatbarangkebawah
+    public Barang10 lihatBarangTerbawah() {
+        if (!isEmpty()) {
+            Barang10 barangTerbawah = tumpukan[0];
+            System.out.println("Barang terbawah: " + barangTerbawah.nama);
+            return barangTerbawah;
+        } else {
+            System.out.println("Tumpukan barang kosong.");
+            return null;
+        }
+    }
+
+    // method cari barang kode
+    public Barang10 cariBarangKode(int kodeBarang) {
+        for (int i = 0; i <= top; i++) {
+            if (tumpukan[i].kode == kodeBarang) {
+                return tumpukan[i];
+            }
+        }
+        return null;
+    }
+
+    // Method cari barang nama
+    public Barang10 cariBarangNama(String namaBarang) {
+        for (int i = 0; i <= top; i++) {
+            if (tumpukan[i].nama.equals(namaBarang)) {
+                return tumpukan[i];
+            }
+        }
+        return null;
     }
 
     public void tampilkanBarang() {

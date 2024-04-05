@@ -58,7 +58,7 @@ public class Postfix10 {
         }
     }
 
-    public String konversi (String Q) {
+    public String konversi(String Q) {
         String P = "";
         char c;
         for (int i = 0; i < n; i++) {
@@ -76,7 +76,7 @@ public class Postfix10 {
                 pop();
             }
             if (IsOperator(c)) {
-                while (derajat(stack[top])) >= derajat(c) {
+                while (derajat(stack[top]) >= derajat(c)) {
                     P = P + pop();
                 }
                 push(c);
