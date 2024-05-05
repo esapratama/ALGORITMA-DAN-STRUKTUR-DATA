@@ -1,5 +1,5 @@
 # <p align ="center">  LAPORAN PRAKTIKUM ALGORITMA DAN STRUKTUR DATA </p>
-# <p align ="center">  UTS SEMESTER 2 </p>
+# <p align ="center">  PRAKTIKUM 10 </p>
 <br><br><br><br>
 
 <p align="center">
