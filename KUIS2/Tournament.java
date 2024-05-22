@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tournament {
-    // Inner class for Rider
+    // kelas untuk Rider
     public static class Rider {
         String name;
         int points;
@@ -22,7 +22,7 @@ public class Tournament {
         }
     }
 
-    // Inner class for Constructor
+    // kelas untuk Constructor
     public static class Constructor {
         String name;
         int points;
@@ -42,7 +42,7 @@ public class Tournament {
         }
     }
 
-    // Class attributes
+    // Class attribut
     List<Match> matches;
     List<Rider> riderStandings;
     List<Constructor> constructorStandings;
@@ -77,7 +77,6 @@ public class Tournament {
                 "=========================================================================================================================");
         for (int i = 0; i < matches.size(); i++) {
             Match match = matches.get(i);
-            // Pastikan setiap atribut memiliki lebar maksimum yang sesuai
             String homeTeam = match.homeTeam.length() > 30 ? match.homeTeam.substring(0, 27) + "..." : match.homeTeam;
             String awayTeam = match.awayTeam.length() > 30 ? match.awayTeam.substring(0, 27) + "..." : match.awayTeam;
             String result = match.result.length() > 20 ? match.result.substring(0, 17) + "..." : match.result;
