@@ -227,7 +227,192 @@ Kode temp.next = temp.next.next; digunakan untuk menghapus elemen setelah elemen
 ## 3. Tugas
 1 Implementasikan ilustrasi Linked List Berikut. Gunakan 4 macam penambahan data yang telah dipelajari sebelumnya untuk menginputkan data. <br>
 ![alt text](<img/P11 T1.jpg>) <br>
+- INPUT <br>
+```
+public class Mahasiswa10 {
+    int NIM;
+    String Nama;
+    Mahasiswa10 next;
+
+    public Mahasiswa10(int NIM, String Nama) {
+        this.NIM = NIM;
+        this.Nama = Nama;
+        this.next = null;
+    }
+}
+```
+
+```
+public class MahasiswaLinkedList10 {
+    Mahasiswa10 head;
+
+    public MahasiswaLinkedList10() {
+        this.head = null;
+    }
+
+    void addFirst(int NIM, String Nama) {
+        Mahasiswa10 input = new Mahasiswa10(NIM, Nama);
+        input.next = head;
+        head = input;
+    }
+
+    void addLast(int NIM, String Nama) {
+        Mahasiswa10 input = new Mahasiswa10(NIM, Nama);
+        if (head == null) {
+            head = input;
+            return;
+        }
+        Mahasiswa10 temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = input;
+    }
+
+    public void insertAfter(int key, int NIM, String Nama) {
+        Mahasiswa10 input = new Mahasiswa10(NIM, Nama);
+        Mahasiswa10 temp = head;
+        while (temp != null && temp.NIM != key) {
+            temp = temp.next;
+        }
+        if (temp == null) {
+            System.out.println("Data dengan NIM " + key + " tidak ditemukan.");
+            return;
+        }
+        input.next = temp.next;
+        temp.next = input;
+    }
+
+    public void insertAt(int posisi, int NIM, String Nama) {
+        if (posisi < 0) {
+            System.out.println("Posisi tidak boleh negatif!");
+            return;
+        }
+        if (posisi == 0) {
+            addFirst(NIM, Nama);
+            return;
+        }
+        Mahasiswa10 input = new Mahasiswa10(NIM, Nama);
+        Mahasiswa10 temp = head;
+        for (int i = 0; i < posisi - 1; i++) {
+            if (temp == null) {
+                System.out.println("Posisi melebihi panjang linked list!");
+                return;
+            }
+            temp = temp.next;
+        }
+        if (temp == null) {
+            System.out.println("Posisi melebihi panjang linked list!");
+            return;
+        }
+        input.next = temp.next;
+        temp.next = input;
+    }
+
+    public void print() {
+        Mahasiswa10 temp = head;
+        System.out.println("Isi Linked List:");
+        while (temp != null) {
+            System.out.println("NIM: " + temp.NIM + ", Nama: " + temp.Nama);
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+}
+```
+
+```
+public class MahasiswaMain10 {
+    public static void main(String[] args) {
+        MahasiswaLinkedList10 linkedList = new MahasiswaLinkedList10();
+
+        linkedList.addFirst(111, "Anton");
+        linkedList.addLast(112, "Prita");
+        linkedList.insertAfter(112, 113, "Yusuf");
+        linkedList.insertAfter(113, 114, "Doni");
+        linkedList.insertAt(4, 115, "Sari");
+
+        linkedList.print();
+    }
+}
+```
+
+- OUTPUT <br>
+![alt text](img/T1.jpg) <br>
 
 2 Buatlah implementasi program antrian layanan unit kemahasiswaan sesuai dengan kondisi yang ditunjukkan pada soal nomor 1! Ketentuan <br>
 a. Implementasi antrian menggunakan Queue berbasis Linked List! <br>
 b. Program merupakan proyek baru, bukan modifikasi dari soal nomor 1 <br>
+- INPUT <br>
+```
+public class MahasiswaQueue210 {
+    int NIM;
+    String nama;
+    MahasiswaQueue210 next;
+
+    MahasiswaQueue210(int NIM, String nama) {
+        this.NIM = NIM;
+        this.nama = nama;
+        this.next = null;
+    }
+}
+```
+
+```
+public class Queue210 {
+    MahasiswaQueue210 front, rear;
+
+    Queue210() {
+        this.front = this.rear = null;
+    }
+
+    void enqueue(int NIM, String nama) {
+        MahasiswaQueue210 newNode = new MahasiswaQueue210(NIM, nama);
+        if (this.rear == null) {
+            this.front = this.rear = newNode;
+            return;
+        }
+        this.rear.next = newNode;
+        this.rear = newNode;
+    }
+
+    MahasiswaQueue210 dequeue() {
+        if (this.front == null)
+            return null;
+        MahasiswaQueue210 temp = this.front;
+        this.front = this.front.next;
+        if (this.front == null)
+            this.rear = null;
+        return temp;
+    }
+
+    void printQueue() {
+        MahasiswaQueue210 current = front;
+        while (current != null) {
+            System.out.println("NIM: " + current.NIM + ", Nama: " + current.nama);
+            current = current.next;
+        }
+    }
+}
+```
+
+```
+public class MahasiswaMain210 {
+    public static void main(String[] args) {
+        Queue210 queue = new Queue210();
+        queue.enqueue(111, "Anton");
+        queue.enqueue(112, "Prita");
+        queue.enqueue(113, "Yusuf");
+        queue.enqueue(114, "Doni");
+        queue.enqueue(115, "Sari");
+
+        queue.printQueue();
+
+        System.out.println("\nDequeue: " + queue.dequeue().nama);
+        queue.printQueue();
+    }
+}
+```
+
+- OUTPUT <br>
+![alt text](img/T2.jpg) <br>
