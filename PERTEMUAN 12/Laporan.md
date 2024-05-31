@@ -705,5 +705,190 @@ public boolean isEmpty() {
 
 ## 12.5 Tugas Praktikum
 1. Buat program antrian vaksinasi menggunakan queue berbasis double linked list sesuai ilustrasi dan menu di bawah ini! (counter jumlah antrian tersisa di menu cetak(3) dan data orang yang telah divaksinasi di menu Hapus Data(2) harus ada) <br>
+```
+public class Node10 {
+    int no;
+    String nama;
+    Node10 prev, next;
+
+    Node10(int no, String nama) {
+        this.prev = prev;
+        this.no = no;
+        this.nama = nama;
+        this.next = next;
+    }
+}
+```
+
+```
+public class DoubleLinkedList10 {
+
+    Node10 head, tail;
+    int size;
+
+    public DoubleLinkedList10() {
+        head = null;
+        tail = null;
+        size = 0;
+    }
+
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public void addLast(int no, String nama) {
+        if (isEmpty()) {
+            head = new Node10(no, nama);
+        } else {
+            Node10 current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            Node10 newNode10 = new Node10(no, nama);
+            current.next = newNode10;
+            tail = newNode10;
+
+        }
+        size++;
+    }
+
+    public void removeFirst() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Linked List masih kosong, tidak dapat dihapus!");
+        } else if (size == 0) {
+            removeLast();
+        } else {
+            System.out.println(head.nama + " Sudah divaksin");
+            head = head.next;
+            head.prev = null;
+            size--;
+        }
+    }
+
+    public void removeLast() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Linked List masih kosong, tidak dapat dihapus!");
+        } else if (head.next == null) {
+            System.out.println(head.nama + " Sudah divaksin");
+            head = null;
+            tail = null;
+            size--;
+            return;
+        }
+        Node10 current = head;
+        while (current.next.next != null) {
+            current = current.next;
+        }
+        current.next = null;
+        size--;
+    }
+
+    public void enqueue(int no, String nama) {
+        // Node10 newNode10 = new Node10(no, nama);
+        if (isEmpty()) {
+            // head = tail = newNode10;
+            addLast(no, nama);
+        } else {
+            Node10 newNode10 = new Node10(no, nama);
+            tail.next = newNode10;
+            newNode10.prev = tail;
+            tail = newNode10;
+        }
+        size++;
+    }
+
+    void Dequeue() {
+        if (isEmpty()) {
+            System.out.println("Linked List Kosong");
+        } else {
+            Node10 removedNode10 = head;
+            head = head.next;
+            if (head != null) {
+                head.prev = null;
+            } else {
+                tail = null;
+            }
+            size--;
+            System.out.println(removedNode10.nama + " Sudah Divasksin");
+        }
+    }
+
+    public void printQueue() {
+        System.out.println("========================================");
+        System.out.println(" DAFTAR PENGANTRI VAKSIN ");
+        System.out.println("========================================");
+        System.out.println(" | No \t | Nama" + " | ");
+        if (!isEmpty()) {
+            Node10 tmp = head;
+            while (tmp != null) {
+                System.out.print(" | " + tmp.no + "\t | " + tmp.nama + "\t | ");
+                tmp = tmp.next;
+            }
+            System.out.println("Sisa Antrian " + size);
+        } else {
+            System.out.println("Linked List Kosong");
+        }
+    }
+}
+```
+
+```
+import java.util.Scanner;
+
+public class DoubleLinkedListMain10 {
+
+    public static void menu() {
+        System.out.println("========================================");
+        System.out.println("PENGANTRI VAKSIN EXTRAVAGANZA");
+        System.out.println("========================================");
+        System.out.println("1. Tambah Data Penerima Vaksin");
+        System.out.println("2. Hapus Data Pengantri Vaksin");
+        System.out.println("3. Daftar Penerima Vaksin");
+        System.out.println("4. Keluar");
+        System.out.println("========================================");
+    }
+
+    public static void main(String[] args) throws Exception {
+        try (Scanner sc10 = new Scanner(System.in)) {
+            DoubleLinkedList10 dll = new DoubleLinkedList10();
+
+            int pilih;
+            do {
+                menu();
+                pilih = sc10.nextInt();
+                sc10.nextLine();
+
+                switch (pilih) {
+                    case 1:
+                        System.out.println("---------------------------------------");
+                        System.out.println("Masukkan Data Penerima Vaksin");
+                        System.out.println("---------------------------------------");
+                        System.out.println("Nomor Antrian\t: ");
+                        int nim = sc10.nextInt();
+                        System.out.println("Nama Penerima \t:");
+                        String nama = sc10.next();
+                        dll.addLast(nim, nama);
+                        sc10.nextLine();
+                        dll.printQueue();
+                        break;
+
+                    case 2:
+                        dll.Dequeue();
+                        // dll.printQueue();
+
+                    case 3:
+                        dll.printQueue();
+                        break;
+
+                    case 4:
+                        System.exit(0);
+                        break;
+
+                }
+            } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4);
+        }
+    }
+}
+```
 
 2. Buatlah program daftar film yang terdiri dari id, judul dan rating menggunakan double linked lists, bentuk program memiliki fitur pencarian melalui ID Film dan pengurutan Rating secara descending. Class Film wajib diimplementasikan dalam soal ini. <br>
