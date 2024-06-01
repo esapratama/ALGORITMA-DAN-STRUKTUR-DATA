@@ -11,7 +11,7 @@ public class Node10 {
         this.right = null;
     }
 
-    public Node10(Object object, int item, Node10 head) {
+    public Node10(Object object) {
         this.data = 0;
         this.left = null;
         this.right = null;
