@@ -890,5 +890,9 @@ public class DoubleLinkedListMain10 {
     }
 }
 ```
+- OUTPUT
+![alt text](img/DLLT1.jpg) <br>
+![alt text](img/DLLT1.2.jpg) <br>
+![alt text](img/DLLT1.3.jpg) <br>
 
 2. Buatlah program daftar film yang terdiri dari id, judul dan rating menggunakan double linked lists, bentuk program memiliki fitur pencarian melalui ID Film dan pengurutan Rating secara descending. Class Film wajib diimplementasikan dalam soal ini. <br>

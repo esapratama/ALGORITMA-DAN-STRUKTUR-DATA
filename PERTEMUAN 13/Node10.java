@@ -1,4 +1,5 @@
 public class Node10 {
+    public final String next = null;
     int data;
     Node10 left;
     Node10 right;

@@ -1,4 +1,6 @@
-class Node10 {
+package TUGAS1;
+
+public class Node10 {
     int no;
     String nama;
     Node10 prev, next;

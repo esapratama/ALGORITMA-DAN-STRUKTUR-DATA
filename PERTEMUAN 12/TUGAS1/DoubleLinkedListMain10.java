@@ -1,3 +1,5 @@
+package TUGAS1;
+
 import java.util.Scanner;
 
 public class DoubleLinkedListMain10 {

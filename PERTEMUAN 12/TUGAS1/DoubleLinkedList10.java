@@ -1,3 +1,5 @@
+package TUGAS1;
+
 public class DoubleLinkedList10 {
 
     Node10 head, tail;
@@ -94,16 +96,19 @@ public class DoubleLinkedList10 {
         System.out.println("========================================");
         System.out.println(" DAFTAR PENGANTRI VAKSIN ");
         System.out.println("========================================");
-        System.out.println(" | No \t | Nama" + " | ");
+        System.out.println(" | No\t| Nama\t  |");
+        System.out.println("========================================");
         if (!isEmpty()) {
             Node10 tmp = head;
             while (tmp != null) {
-                System.out.print(" | " + tmp.no + "\t | " + tmp.nama + "\t | ");
+                System.out.println(" | " + tmp.no + "\t| " + tmp.nama + "\t  |");
                 tmp = tmp.next;
             }
+            System.out.println("========================================");
             System.out.println("Sisa Antrian " + size);
         } else {
             System.out.println("Linked List Kosong");
         }
     }
+
 }
