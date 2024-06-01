@@ -1,9 +1,11 @@
 public class DoubleLinkedList10 {
     Node10 head;
+    Node10 tail;
     int size;
 
     public DoubleLinkedList10() {
         head = null;
+        tail = null;
         size = 0;
     }
 
@@ -28,7 +30,7 @@ public class DoubleLinkedList10 {
         } else {
             Node10 current = head;
             while (current.next != null) {
-                current = (Node10) current.next;
+                current = current.next;
             }
             Node10 newNode = new Node10(current, item, null);
             current.next = newNode;
@@ -43,24 +45,18 @@ public class DoubleLinkedList10 {
             throw new Exception("Nilai indeks di luar batas");
         } else {
             Node10 current = head;
-            int i = 0;
-            while (i < index) {
-                current = (Node10) current.next;
-                i++;
+            for (int i = 0; i < index; i++) {
+                current = current.next;
             }
+            Node10 newNode = new Node10(current.prev, item, current);
             if (current.prev == null) {
-                Node10 newNode = new Node10(null, item, current);
-                current.prev = newNode;
                 head = newNode;
             } else {
-                Node10 newNode = new Node10(current.prev, item, current);
-                newNode.prev = current.prev;
-                newNode.next = current;
                 current.prev.next = newNode;
-                current.prev = newNode;
             }
+            current.prev = newNode;
+            size++;
         }
-        size++;
     }
 
     public int size() {
@@ -77,7 +73,7 @@ public class DoubleLinkedList10 {
             Node10 tmp = head;
             while (tmp != null) {
                 System.out.print(tmp.data + "\t");
-                tmp = (Node10) tmp.next;
+                tmp = tmp.next;
             }
             System.out.println("\nberhasil diisi");
         } else {
@@ -91,7 +87,7 @@ public class DoubleLinkedList10 {
         } else if (size == 1) {
             removeLast();
         } else {
-            head = (Node10) head.next;
+            head = head.next;
             head.prev = null;
             size--;
         }
@@ -101,16 +97,13 @@ public class DoubleLinkedList10 {
         if (isEmpty()) {
             throw new Exception("Linked List masih kosong, tidak dapat dihapus!");
         } else if (head.next == null) {
-            head = null;
+            head = tail = null;
             size--;
-            return;
+        } else {
+            tail = tail.prev;
+            tail.next = null;
+            size--;
         }
-        Node10 current = head;
-        while (current.next != null) { // next
-            current = (Node10) current.next;
-        }
-        current.next = null;
-        size--;
     }
 
     public void remove(int index) throws Exception {
@@ -122,7 +115,7 @@ public class DoubleLinkedList10 {
             Node10 current = head;
             int i = 0;
             while (i < index) {
-                current = (Node10) current.next;
+                current = current.next;
                 i++;
             }
             if (current.next == null) {
@@ -152,7 +145,7 @@ public class DoubleLinkedList10 {
         }
         Node10 tmp = head;
         while (tmp.next != null) {
-            tmp = (Node10) tmp.next;
+            tmp = tmp.next;
         }
         return tmp.data;
     }
@@ -161,10 +154,10 @@ public class DoubleLinkedList10 {
         if (isEmpty() || index >= size) {
             throw new Exception("Nilai indeks di luar batas.");
         }
-        Node10 tmp = head;
+        Node10 current = head;
         for (int i = 0; i < index; i++) {
-            tmp = (Node10) tmp.next;
+            current = current.next;
         }
-        return tmp.data;
+        return current.data;
     }
 }
