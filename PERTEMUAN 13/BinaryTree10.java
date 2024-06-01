@@ -14,6 +14,7 @@ public class BinaryTree10 {
         root = addRecursive(root, data);
     }
 
+    // menambahkan method recursive
     private Node10 addRecursive(Node10 current, int data) {
         if (current == null) {
             return new Node10(data);
@@ -118,5 +119,69 @@ public class BinaryTree10 {
 
     private int findSmallestValue(Node10 root) {
         return root.left == null ? root.data : findSmallestValue(root.left);
+    }
+
+    // menambahkan method nilai yang paling kecil
+    public int findMinValue() {
+        if (isEmpty()) {
+            System.out.println("Tree is empty.");
+            return Integer.MIN_VALUE;
+        }
+        Node10 current = root;
+        while (current.left != null) {
+            current = current.left;
+        }
+        return current.data;
+    }
+
+    // menambahkan method nilai yang paling besar
+    public int findMaxValue() {
+        if (isEmpty()) {
+            System.out.println("Tree is empty.");
+            return Integer.MAX_VALUE;
+        }
+        Node10 current = root;
+        while (current.right != null) {
+            current = current.right;
+        }
+        return current.data;
+    }
+
+    // menambahkan method untuk menampilkan data di leaf nodes
+    public void displayLeafNodes() {
+        if (isEmpty()) {
+            System.out.println("Tree is empty.");
+            return;
+        }
+        System.out.print("Leaf nodes: ");
+        displayLeafNodesRecursive(root);
+        System.out.println();
+    }
+
+    // menambahkan method rekursif untuk menampilkan data di leaf nodes
+    private void displayLeafNodesRecursive(Node10 node) {
+        if (node != null) {
+            if (node.left == null && node.right == null) {
+                System.out.print(node.data + " ");
+            }
+            displayLeafNodesRecursive(node.left);
+            displayLeafNodesRecursive(node.right);
+        }
+    }
+
+    // menambahkan method untuk menghitung jumlah leaf nodes dalam pohon
+    public int countLeaves() {
+        return countLeavesRecursive(root);
+    }
+
+    // menambahkan method rekursif untuk menghitung jumlah leaf nodes
+    private int countLeavesRecursive(Node10 node) {
+        if (node == null) {
+            return 0;
+        }
+        if (node.left == null && node.right == null) {
+            return 1;
+        }
+        return countLeavesRecursive(node.left) + countLeavesRecursive(node.right);
     }
 }
