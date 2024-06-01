@@ -28,7 +28,7 @@ public class DoubleLinkedList10 {
         } else {
             Node10 current = head;
             while (current.next != null) {
-                current = current.next;
+                current = (Node10) current.next;
             }
             Node10 newNode = new Node10(current, item, null);
             current.next = newNode;
@@ -45,7 +45,7 @@ public class DoubleLinkedList10 {
             Node10 current = head;
             int i = 0;
             while (i < index) {
-                current = current.next;
+                current = (Node10) current.next;
                 i++;
             }
             if (current.prev == null) {
@@ -77,7 +77,7 @@ public class DoubleLinkedList10 {
             Node10 tmp = head;
             while (tmp != null) {
                 System.out.print(tmp.data + "\t");
-                tmp = tmp.next;
+                tmp = (Node10) tmp.next;
             }
             System.out.println("\nberhasil diisi");
         } else {
@@ -91,7 +91,7 @@ public class DoubleLinkedList10 {
         } else if (size == 1) {
             removeLast();
         } else {
-            head = head.next;
+            head = (Node10) head.next;
             head.prev = null;
             size--;
         }
@@ -106,8 +106,8 @@ public class DoubleLinkedList10 {
             return;
         }
         Node10 current = head;
-        while (current.next.next != null) {
-            current = current.next;
+        while (current.next != null) { // next
+            current = (Node10) current.next;
         }
         current.next = null;
         size--;
@@ -122,18 +122,18 @@ public class DoubleLinkedList10 {
             Node10 current = head;
             int i = 0;
             while (i < index) {
-                current = current.next;
+                current = (Node10) current.next;
                 i++;
             }
             if (current.next == null) {
                 current.prev.next = null;
             } else if (current.prev == null) {
-                current = current.next;
+                current = (Node10) current.next;
                 current.prev = null;
                 head = current;
             } else {
                 current.prev.next = current.next;
-                current.next.prev = current.prev;
+                current.next = current.prev; // prev
             }
             size--;
         }
@@ -152,7 +152,7 @@ public class DoubleLinkedList10 {
         }
         Node10 tmp = head;
         while (tmp.next != null) {
-            tmp = tmp.next;
+            tmp = (Node10) tmp.next;
         }
         return tmp.data;
     }
@@ -163,7 +163,7 @@ public class DoubleLinkedList10 {
         }
         Node10 tmp = head;
         for (int i = 0; i < index; i++) {
-            tmp = tmp.next;
+            tmp = (Node10) tmp.next;
         }
         return tmp.data;
     }
