@@ -24,7 +24,7 @@ public class GraphMatriks10 {
         }
     }
 
-    public void removeEdge(int i, int j) {
-        throw new UnsupportedOperationException("Unimplemented method 'removeEdge'");
+    public void removeEdge(int asal, int tujuan) {
+        matriks[asal][tujuan] = 0;
     }
 }

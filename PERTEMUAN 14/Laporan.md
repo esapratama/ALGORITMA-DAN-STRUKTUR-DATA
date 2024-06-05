@@ -323,10 +323,78 @@ Tujuan dari pembuatan variabel ini adalah untuk memodelkan struktur data graf me
 ![alt text](<img/SOAL 5.jpg>) <br>
 
 ## 2.2 Percobaan 2: Implementasi Graph menggunakan Matriks
+```
+public class GraphMatriks10 {
+
+    int vertex;
+    int[][] matriks;
+
+    public GraphMatriks10(int v) {
+        vertex = v;
+        matriks = new int[v][v];
+    }
+
+    public void makeEdge(int asal, int tujuan, int jarak) {
+        matriks[asal][tujuan] = jarak;
+    }
+
+    public void printGraph() {
+        for (int i = 0; i < vertex; i++) {
+            System.out.print("Gedung " + (char) ('A' + i) + ": ");
+            for (int j = 0; j < vertex; j++) {
+                if (matriks[i][j] != -1) {
+                    System.out.print("Gedung " + ('A' + j) + " (" + matriks[i][j] + " m), ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public void removeEdge(int asal, int tujuan) {
+        matriks[asal][tujuan] = 0;
+    }
+}
+```
+
+```
+public class GraphMain10 {
+    public static void main(String[] args) throws Exception {
+        Graph10 gedung = new Graph10(6);
+        gedung.addEdge(0, 2, 100);
+        gedung.addEdge(0, 1, 50);
+        gedung.addEdge(1, 3, 70);
+        gedung.addEdge(2, 3, 40);
+        gedung.addEdge(3, 4, 60);
+        gedung.addEdge(4, 5, 80);
+
+        gedung.degree(0);
+        gedung.printGraph();
+
+        gedung.removeEdge(1, 3);
+        gedung.printGraph();
+
+        GraphMatriks10 gdg = new GraphMatriks10(4);
+        gdg.makeEdge(0, 1, 50);
+        gdg.makeEdge(1, 0, 60);
+        gdg.makeEdge(1, 2, 70);
+        gdg.makeEdge(2, 1, 80);
+        gdg.makeEdge(2, 3, 40);
+        gdg.makeEdge(3, 0, 90);
+        gdg.printGraph();
+        System.out.println("Hasil setelah pengahpusan edge");
+
+        gdg.removeEdge(2, 1);
+        gdg.printGraph();
+    }
+}
+```
 ## 2.2.2 Verifikasi Hasil Percobaan
+![alt text](img/G3.jpg) <br>
 ## 2.2.3 Pertanyaan
 1. Perbaiki kode program Anda apabila terdapat error atau hasil kompilasi kode tidak sesuai! <br>
+- sudah <br>
 2. Apa jenis graph yang digunakan pada Percobaan 2?<br>
+- grap matriks bertipe array
 3. Apa maksud dari dua baris kode berikut? <br>
 ```
 gdg.makeEdge(1, 2, 70);
