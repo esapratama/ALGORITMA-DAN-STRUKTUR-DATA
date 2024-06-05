@@ -33,6 +33,7 @@ public class Node10 {
     }
 }
 ```
+```
 public class BinaryTree10 {
 
     Node10 root;
@@ -155,7 +156,7 @@ public class BinaryTree10 {
         return root.left == null ? root.data : findSmallestValue(root.left);
     }
 }
-
+```
 ```
 public class BinaryTree10 {
 

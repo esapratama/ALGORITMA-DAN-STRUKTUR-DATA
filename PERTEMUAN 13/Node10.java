@@ -16,8 +16,4 @@ public class Node10 {
         this.left = null;
         this.right = null;
     }
-
-    public Node10(int data2) {
-        // TODO Auto-generated constructor stub
-    }
 }
