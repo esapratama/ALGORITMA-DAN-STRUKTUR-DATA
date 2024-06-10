@@ -1,30 +1,68 @@
+import java.util.Scanner;
+
 public class GraphMain10 {
     public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
         Graph10 gedung = new Graph10(6);
-        gedung.addEdge(0, 2, 100);
-        gedung.addEdge(0, 1, 50);
-        gedung.addEdge(1, 3, 70);
-        gedung.addEdge(2, 3, 40);
-        gedung.addEdge(3, 4, 60);
-        gedung.addEdge(4, 5, 80);
 
-        gedung.degree(0);
-        gedung.printGraph();
+        while (true) {
+            System.out.println("\nMenu Program:");
+            System.out.println("a) Add Edge");
+            System.out.println("b) Remove Edge");
+            System.out.println("c) Degree");
+            System.out.println("d) Print Graph");
+            System.out.println("e) Cek Edge");
+            System.out.println("x) Keluar");
 
-        gedung.removeEdge(1, 3);
-        gedung.printGraph();
+            System.out.print("Pilih menu: ");
+            String pilihan = sc.nextLine();
 
-        GraphMatriks10 gdg = new GraphMatriks10(4);
-        gdg.makeEdge(0, 1, 50);
-        gdg.makeEdge(1, 0, 60);
-        gdg.makeEdge(1, 2, 70);
-        gdg.makeEdge(2, 1, 80);
-        gdg.makeEdge(2, 3, 40);
-        gdg.makeEdge(3, 0, 90);
-        gdg.printGraph();
-        System.out.println("Hasil setelah pengahpusan edge");
-
-        gdg.removeEdge(2, 1);
-        gdg.printGraph();
+            switch (pilihan) {
+                case "a":
+                    System.out.print("Masukkan gedung asal: ");
+                    int asalA = sc.nextInt();
+                    System.out.print("Masukkan gedung tujuan: ");
+                    int tujuanA = sc.nextInt();
+                    System.out.print("Masukkan jarak: ");
+                    int jarakA = sc.nextInt();
+                    gedung.addEdge(asalA, tujuanA, jarakA);
+                    break;
+                case "b":
+                    System.out.print("Masukkan gedung asal: ");
+                    int asalB = sc.nextInt();
+                    System.out.print("Masukkan gedung tujuan: ");
+                    int tujuanB = sc.nextInt();
+                    gedung.removeEdge(asalB, tujuanB);
+                    break;
+                case "c":
+                    System.out.print("Masukkan gedung: ");
+                    int gedungC = sc.nextInt();
+                    gedung.degree(gedungC);
+                    break;
+                case "d":
+                    gedung.printGraph();
+                    break;
+                case "e":
+                    System.out.print("Masukkan gedung asal: ");
+                    int asalE = sc.nextInt();
+                    System.out.print("Masukkan gedung tujuan: ");
+                    int tujuanE = sc.nextInt();
+                    boolean tetangga = gedung.cekTetangga(asalE, tujuanE);
+                    char gedungAsal = (char) ('A' + asalE);
+                    char gedungTujuan = (char) ('A' + tujuanE);
+                    if (tetangga) {
+                        System.out.println("Gedung " + gedungAsal + " dan " + gedungTujuan + " bertetangga");
+                    } else {
+                        System.out.println("Gedung " + gedungAsal + " dan " + gedungTujuan + " tidak bertetangga");
+                    }
+                    break;
+                case "x":
+                    System.out.println("Terima kasih telah menggunakan program.");
+                    System.exit(0);
+                default:
+                    System.out.println("Pilihan tidak valid. Silakan pilih menu yang tersedia.");
+            }
+            sc.nextLine(); // Clear buffer
+        }
     }
 }
