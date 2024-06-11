@@ -180,4 +180,19 @@ public class DoubleLinkedList10 {
             System.out.println("Terjadi kesalahan saat memperbarui jarak: " + e.getMessage());
         }
     }
+
+    public void addFirst(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addFirst'");
+    }
+
+    public void addLast(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addLast'");
+    }
+
+    public void add(int i, int j) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'add'");
+    }
 }

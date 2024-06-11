@@ -16,4 +16,8 @@ public class Node10 {
     public Node10(Node10 prev2, int input, Object object) {
 
     }
+
+    public Node10(int input, Object object) {
+        // TODO Auto-generated constructor stub
+    }
 }
